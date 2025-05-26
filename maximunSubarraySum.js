@@ -15,3 +15,5 @@ console.log(maxSequence([ -2, 1, -3, 4, -1, 2, 1, -5, 4 ]))
 // intialize maxSum and currentSum to zeros
 // List all posible contingouos chunks
 // loop through array, 
+
+// Test
