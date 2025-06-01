@@ -18,3 +18,4 @@ var countBits = function(n) {
 
 // Test
 console.log(countBits(25))
+
