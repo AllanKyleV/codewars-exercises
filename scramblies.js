@@ -16,5 +16,4 @@ console.log(scramble('scriptjavx', 'javascript'))
 // Pseducode:
 // return true if the portion of str1 can be rearrange as str2, else return false
 // if char in str1 includes all item/char in str2, return true, else false
-// 
-
+// Issue found at the last console log
