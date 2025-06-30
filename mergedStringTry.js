@@ -1,14 +1,29 @@
 function isMerge(s, part1, part2) {
-    
+    const sum = part1.length + part2.length;
+    for (let char of s) {
+        if (part1.includes(char)) {
+            let index = part1.indexOf(char);
+            part1 = part1.slice(0, index) + part1.slice(index + 1);
+        } else if (part2.includes(char)) {
+            let index = part2.indexOf(char);
+            part2 = part2.slice(0, index) + part2.slice(index + 1);
+        } else {
+            return false;
+        }
+    }
+
+    if (part1.length === 0 && part2.length === 0 && s.length === sum) return true;
+    return false;
 }
 
 const s = 'codewars';
 const part1 = 'cdw';
 const part2 = 'oears';
 console.log(isMerge(s, part1, part2));
+console.log(isMerge('codewars', 'code', 'code'));
+console.log(isMerge('codewars', 'code', 'wasr'));
 
-// Solution 2: Using recursion
-//      loop the s, if the current letter of s matches the first letter of the part1, remove it. If not check part 2, if also not return false.
+// Solution 2: 
 
 
 // Link: https://www.codewars.com/kata/54c9fcad28ec4c6e680011aa/train/javascript
